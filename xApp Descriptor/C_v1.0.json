@@ -1,0 +1,27 @@
+{
+	"xapp_name": "xapp-handover-123abc",
+	"version": "1.0.0",
+	"containers": [
+		{
+			"name": "xapp-handover-123abc",
+			"image": {
+				"registry": "NULL",
+				"name": "xapp-handover-456wxyz",
+				"tag": "1.0.0"
+			}
+		}
+	],
+	"messaging": {
+		"ports": [
+			{
+				"name": "rmr-data-route",
+                "container": "xapp-handover-123abc",
+				"port": "NULL",
+				"txMessages": ["RT_Request", "DB_Sub_Request", "DB_Ctrl_Request"],
+				"rxMessages": ["RT_Response", "DB_Sub_Response", "DB_Ctrl_Response"],
+				"policies": [],
+				"description": "rmr receive data and route port"
+			}
+		]
+	}
+}
