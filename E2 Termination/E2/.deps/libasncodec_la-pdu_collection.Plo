@@ -1,0 +1,4 @@
+libasncodec_la-pdu_collection.lo: pdu_collection.c \
+ /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:

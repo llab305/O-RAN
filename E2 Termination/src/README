@@ -1,0 +1,6 @@
+
+Top level source directory. 
+	Subdirectories are:
+		rmr		 -- main RMr code
+		bindings -- various language bindings (wrappers)
+
