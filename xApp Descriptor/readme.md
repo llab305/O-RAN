@@ -20,7 +20,7 @@ The xApp descriptor is required for the xApp deploying within the Near-RT RIC, w
     
     |"\<type\>"|Description|
     |---|---|
-    |"5qi-\<5QI value\>"|Identifies that the appropriate 5G QoS is assigned to traffic. "< 5QI value>" denotes QoS requirements for a specific vertical application, including packet error rate (PER), packet delay budget (PDB), throughput, and other conditions.|  
+    |"5qi-\<5QI value\>"|Identifies that the appropriate 5G QoS is assigned to traffic. "<5QI value>" denotes QoS requirements for a specific vertical application, including packet error rate (PER), packet delay budget (PDB), throughput, and other conditions.|  
     |"handover"|Identifies that the UE hands over from a cell served by the base station to a cell served by another base station or the UE hands over from a cell served by the base station to another cell served by the base station.|
     
     * "\<identifier\>" is used to distinguish xApps for the same purpose but with different algorithm designs or control different UEs. When filling in the content, the xApp designer must only use lowercase English letters and digits may use to fill content.
