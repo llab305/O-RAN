@@ -25,8 +25,7 @@ The xApp descriptor is required for the xApp deploying within the Near-RT RIC, w
     
     "\<identifier\>" is used to distinguish xApps for the same purpose but with different algorithm designs or control different UEs. When filling in the content, the xApp designer must only use lowercase English letters and digits may use to fill content.
   
-  *	Example: </br>
-    if "\<type\>" is equal to "5qi-\<5QI value\>", as shown in Figure 2.1-1; if "\<type\>" is equal to "handover", as shown in Figure 2.1-2.
+  *	Example: if "\<type\>" is equal to "5qi-\<5QI value\>", as shown in Figure 2.1-1; if "\<type\>" is equal to "handover", as shown in Figure 2.1-2.
     
     <p align="center"> Figure 2.1-1 xapp_name - if "< type >" equals "5QI-<5QI value>" - example </p>
     ![Figure](https://github.com/llab305/O-RAN/raw/main/xApp%20Descriptor/Figure/Figure%202.1-1.png)
