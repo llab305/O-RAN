@@ -29,10 +29,10 @@ The xApp descriptor is required for the xApp deploying within the Near-RT RIC, w
     if "\<type\>" is equal to "5qi-\<5QI value\>", as shown in Figure 2.1-1; if "\<type\>" is equal to "handover", as shown in Figure 2.1-2.
     
     <p align="center"> Figure 2.1-1 xapp_name - if "< type >" equals "5QI-<5QI value>" - example </p>
-    ![image](https://user-images.githubusercontent.com/116550203/202102864-1031aaec-799d-4886-b71f-ee942c53c17c.png)
+    ![image](https://github.com/llab305/O-RAN/blob/main/xApp%20Descriptor/Figure/Figure%202.1-1.png)
     
     <p align="center"> Figure 2.1-2 xapp_name - if "< type >" equals "handover" - example </p>
-    ![image](https://user-images.githubusercontent.com/116550203/202105017-fa1697bf-370f-4440-85ac-529a89af9fa0.png)
+    ![image](https://github.com/llab305/O-RAN/blob/main/xApp%20Descriptor/Figure/Figure%202.1-2.png)
 
       
       
