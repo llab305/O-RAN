@@ -32,5 +32,7 @@ The xApp descriptor is required for the xApp deploying within the Near-RT RIC, w
     ![image](xApp Descriptor/Figure/Figure 2.1-1.png)
     
     <p align="center"> Figure 2.1-2 xapp_name - if "< type >" equals "handover" - example </p>
-    ![image](xApp Descriptor/Figure/Figure 2.1-2.png)
+    ![image](https://github.com/llab305/O-RAN/blob/2d9ecde63040a855d8ffc36d4caa447b82b0846a/xApp%20Descriptor/Figure/Figure%202.1-2.png)
 
+     
+     
