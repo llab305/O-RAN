@@ -1,7 +1,6 @@
 # Python xapp frame
-
-    Ping-Pong is a test for sending messages
-    xapp_example_tlv is an xapp example rewritten based on ping-pong that also need routing table to active
+Ping-Pong is a test for sending messages
+xapp_example_tlv is an xapp example rewritten based on ping-pong that also need routing table to active
 
 # Running locally for ping-pong
 
