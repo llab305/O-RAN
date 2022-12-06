@@ -14,24 +14,42 @@ The xApp descriptor is required for the xApp deploying within the Near-RT RIC, w
     
     Naming rules have the following definitions: </br>
     
-    "\<type\>" identifies xApp's purpose. When filling in the content, the xApp designer must only use lowercase English letters and digits, and the content should be filled in according to the rules suggested in Table 2.1-1.</br>
+    * "\<type\>" identifies xApp's purpose. When filling in the content, the xApp designer must only use lowercase English letters and digits, and the content should be filled in according to the rules suggested in Table 2.1-1.</br>
     
     <p align="center"> Table 2.1-1 "< type >" suggested rules to fill in the corresponding table </p>
     
     |"\<type\>"|Description|
     |---|---|
-    |"5qi-\<5QI value\>"|Identifies that the appropriate 5G QoS is assigned to traffic. "< 5QI value>" denotes QoS requirements for a specific vertical application, including packet error rate (PER), packet delay budget (PDB), throughput, and other conditions.|  
+    |"5qi-\<5QI value\>"|Identifies that the appropriate 5G QoS is assigned to traffic. "<5QI value>" denotes QoS requirements for a specific vertical application, including packet error rate (PER), packet delay budget (PDB), throughput, and other conditions.|  
     |"handover"|Identifies that the UE hands over from a cell served by the base station to a cell served by another base station or the UE hands over from a cell served by the base station to another cell served by the base station.|
     
-    "\<identifier\>" is used to distinguish xApps for the same purpose but with different algorithm designs or control different UEs. When filling in the content, the xApp designer must only use lowercase English letters and digits may use to fill content.
+    * "\<identifier\>" is used to distinguish xApps for the same purpose but with different algorithm designs or control different UEs. When filling in the content, the xApp designer must only use lowercase English letters and digits may use to fill content.
   
-  *	Example: </br>
-    if "\<type\>" is equal to "5qi-\<5QI value\>", as shown in Figure 2.1-1; if "\<type\>" is equal to "handover", as shown in Figure 2.1-2.
+  *	Example: if "\<type\>" is equal to "5qi-\<5QI value\>", as shown in Figure 2.1-1; if "\<type\>" is equal to "handover", as shown in Figure 2.1-2.
     
+    ![figure](https://raw.githubusercontent.com/llab305/O-RAN/master/xApp%20Descriptor/Figure/Figure%202.1-1.png) </br>
     <p align="center"> Figure 2.1-1 xapp_name - if "< type >" equals "5QI-<5QI value>" - example </p>
-    ![Figure](https://github.com/llab305/O-RAN/raw/main/xApp%20Descriptor/Figure/Figure%202.1-1.png)
     
+    
+    ![figure](https://raw.githubusercontent.com/llab305/O-RAN/master/xApp%20Descriptor/Figure/Figure%202.1-2.png)
     <p align="center"> Figure 2.1-2 xapp_name - if "< type >" equals "handover" - example </p>
-    ![Figure](https://github.com/llab305/O-RAN/raw/main/xApp%20Descriptor/Figure/Figure%202.1-2.png)
+    
+***
 
+***
+### 2.2 version (Mandatory)    
+ *	Writer : xApp designer
+ *	Data type : string
+ *	Description : </br>
+***
+
+***
+### 2.3	containers (Mandatory)
+
+#### 2.3.1 name (Mandatory)
+***     
+     
+     
+     
+     
      
