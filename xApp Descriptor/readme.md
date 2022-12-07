@@ -47,7 +47,7 @@ The xApp descriptor is required for the xApp deploying within the Near-RT RIC, w
 
 
 ### 2.3	containers (Mandatory)
-It covers the container the xApp will run in. However, this version limits xApp to only be deployed as a Pod, a Pod can only run one container, and a container can only support one image, but an image can be referenced by multiple Pods. For containers, the following fields are included: <b>name (Mandatory), image (Mandatory)</b>.
+It covers the container the xApp will run in. However, this version limits xApp to only be deployed as a Pod, a Pod can only run one container, and a container can only support one image, but an image can be referenced by multiple Pods. For containers, include the following fields: <b>name (Mandatory), image (Mandatory)</b>.
 
 ***
 #### 2.3.1 name (Mandatory)
@@ -62,7 +62,7 @@ It covers the container the xApp will run in. However, this version limits xApp 
 ***
 
 #### 2.3.2 image (Mandatory) 
-Contains the image in the container that will run this xApp. For images, include the following fields: registry (Mandatory), name 	(Mandatory), and tag (Mandatory).
+Contains the image in the container that will run this xApp. For image, include the following fields: <b>registry (Mandatory), name 	(Mandatory), and tag (Mandatory)</b>.
 
 ***
 ##### 2.3.2.1	registry (Mandatory)
