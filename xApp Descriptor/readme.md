@@ -39,12 +39,37 @@ The xApp descriptor is required for the xApp deploying within the Near-RT RIC, w
 ### 2.2 version (Mandatory)    
  *	Writer : xApp designer
  *	Data type : string
- *	Description : </br>
- *	Example : The version number of xApp Descriptor. </br> The naming will be filled in according to the rules of "\<major version\>.\<minor version\>.\<patch version\>", where "\<major version\>" increases the version number sequentially from 1, "\<minor version\>" and "\<patch version\>" increase the version number sequentially starting from 0, that is to say, all version number updates after this version number are based on the modified content of this xApp Descriptor. </br></br> The rules for incrementing the version number are defined as follows: </br> 1. If the xApp Descriptor changes the main field, it will increment "\<major version\>", at which time "\<minor version\>" and "\<patch version\>" must be reset to zero. Main fields e.g., <b> xapp_name (Mandatory) field, version (Mandatory) field, containers (Mandatory) field, and messaging (Optional) field</b>.</br> 2. If xApp Descriptor maintains a backward-compatible main field and adds a secondary field, "\<minor version\>" is incremented, and "\<patch version\>" must be reset to zero when incremented. The secondary fields are shown in Table 2.2-1.
+ *	Description : The version number of xApp descriptor. </br> The naming will be filled in according to the rules of "\<major version\>.\<minor version\>.\<patch version\>", where "\<major version\>" increases the version number sequentially from 1, "\<minor version\>" and "\<patch version\>" increase the version number sequentially starting from 0, that is to say, all version number updates after this version number are based on the modified content of this xApp descriptor. </br></br> The rules for incrementing the version number are defined as follows: </br> 
+     1. If the xApp descriptor changes the main field, it will increment "\<major version\>", at which time "\<minor version\>" and "\<patch version\>" must be reset to zero. Main fields e.g., <b> xapp_name (Mandatory) field, version (Mandatory) field, containers (Mandatory) field, and messaging (Optional) field</b>.</br> 
+     2. If xApp descriptor maintains a backward-compatible main field and adds a secondary field, "\<minor version\>" is incremented, and "\<patch version\>" must be reset to zero when incremented. The secondary fields are shown in Table 2.2-1.</br>
+     
+     <p align="center"> Table 2.2-1 Secondary field correspondence table under the main field </p>
 
- <p align="center"> </p>
- <p align="center"><img src = ""></image></p>
- 
+    |secondary field\main field|containers (Mandatory)|messaging (Optional)|
+    |---|---|---|
+    |1|name (Mandatory) (container name)|ports (Mandatory)|  
+    |2|image (Mandatory)|name (Mandatory) (port name)|
+    |3|registry (Mandatory)|container (Mandatory)|  
+    |4|handover|port (Mandatory)|
+    |5|name 	(Mandatory) (image name)|txMessages (Mandatory)|  
+    |6|handover|rxMessages (Mandatory)|
+    |7|tag (Mandatory)|policies (Mandatory)|  
+    |8||PolicyTypeId (Conditional)|
+    |9||SupportXapp (Optional)|  
+    |10||description (Optional)|  
+
+    3. If the xApp descriptor maintains a backward-compatible main field and no secondary fields are added, but the content needs to be corrected, increment "\<patch version\>". 
+     
+     Naming rules have the following definitions:
+     * "\<major version\>" is the major version number of the xApp descriptor. Only numbers can be used when filling in the content, and there is no need to fill in zeros before the numbers.
+     * "\<minor version\>" is the minor version number of xApp descriptor. Only numbers can be used when filling in the content, and there is no need to fill in zeros before the numbers.
+     * "\<patch version\>" is the patch number of the xApp descriptor. Only numbers can be used when filling in the content, and there is no need to fill in zeros before the numbers.
+     
+ *	Example : Figure 2.2-1 </br>
+     
+ <p align="center"><img src = "https://raw.githubusercontent.com/llab305/O-RAN/master/xApp%20Descriptor/Figure/Figure%202.2-1.png"></image></p>
+ <p align="center"> Figure 2.2-1 version - example </p>
+  
 ***
 
 
