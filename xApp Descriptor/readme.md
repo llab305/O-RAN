@@ -40,9 +40,11 @@ The xApp descriptor is required for the xApp deploying within the Near-RT RIC, w
  *	Writer : xApp designer
  *	Data type : string
  *	Description : </br>
- *	Example : 
+ *	Example : The version number of xApp Descriptor. </br> The naming will be filled in according to the rules of "\<major version\>.\<minor version\>.\<patch version\>", where "\<major version\>" increases the version number sequentially from 1, "\<minor version\>" and "\<patch version\>" increase the version number sequentially starting from 0, that is to say, all version number updates after this version number are based on the modified content of this xApp Descriptor. </br></br> The rules for incrementing the version number are defined as follows: </br> 1. If the xApp Descriptor changes the main field, it will increment "\<major version\>", at which time "\<minor version\>" and "\<patch version\>" must be reset to zero. Main fields e.g., <b> xapp_name (Mandatory) field, version (Mandatory) field, containers (Mandatory) field, and messaging (Optional) field</b>.</br> 2. If xApp Descriptor maintains a backward-compatible main field and adds a secondary field, "\<minor version\>" is incremented, and "\<patch version\>" must be reset to zero when incremented. The secondary fields are shown in Table 2.2-1.
+
  <p align="center"> </p>
  <p align="center"><img src = ""></image></p>
+ 
 ***
 
 
