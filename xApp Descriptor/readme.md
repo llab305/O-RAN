@@ -151,8 +151,24 @@ For non-RMR port, include the following fields: <b>name (Mandatory), container (
 ###### 2.4.1.1 name (Mandatory)
  *	Writer : xApp designer
  *	Data type : string
- *	Description : </br>
- *	Example : 
+ *	Description : The name of the port number.</br> 
+     For the RMR port, if the data port of the RMR port is the same as the route port, "rmr-data-route" must be filled in; otherwise, if the data port of the RMR port is different from the route port, the RMR data port must be filled with "rmr-data", The RMR routing port must be filled with "rmr-route". <br>
+     For non-RMR ports, fill in the content according to the communication purpose of the port number. When filling in the content, only uppercase and lowercase English letters or numbers can be used to fill in the content.
+     
+ *	Example : For RMR port, if the data port of the RMR port is the same as the route port, as shown in Figure 2.4-1; if the data port of the RMR port is different from the route port, as shown in Figure 2.4-2 and Figure 2.4-3. For non-RMR ports, as shown in Figure 2.4-4.
+ 
+ <p align="center"><img src = "https://raw.githubusercontent.com/llab305/O-RAN/master/xApp%20Descriptor/Figure/Figure%202.4-1.png"></image></p>
+ <p align="center"> Figure 2.4-1 messaging.ports.name - example </p>
+
+ <p align="center"><img src = "https://raw.githubusercontent.com/llab305/O-RAN/master/xApp%20Descriptor/Figure/Figure%202.4-2.png"></image></p>
+ <p align="center"> Figure 2.4-2 messaging.ports.name - example </p>
+ 
+ <p align="center"><img src = "https://raw.githubusercontent.com/llab305/O-RAN/master/xApp%20Descriptor/Figure/Figure%202.4-3.png"></image></p>
+ <p align="center"> Figure 2.4-3 messaging.ports.name - example </p>
+     
+ <p align="center"><img src = "https://raw.githubusercontent.com/llab305/O-RAN/master/xApp%20Descriptor/Figure/Figure%202.4-4.png"></image></p>
+ <p align="center"> Figure 2.4-4 messaging.ports.name - example </p>     
+     
 ***
      
 ###### 2.4.1.2 container (Mandatory)
@@ -180,25 +196,77 @@ For non-RMR port, include the following fields: <b>name (Mandatory), container (
 ###### 2.4.1.4	txMessages (Mandatory)
  *	Writer : xApp designer
  *	Data type : string
- *	Description : </br>
- *	Example : 
+ *	Description : Different processes and events in xApp correspond to different RMR message type names, which will contain all RMR message type names of xApp that can deliver the request, and then xApp Manager will update the data in the xApp Manager table in influxDB.</br>
+ *	Example : Figure 2.4-7
+     
+ <p align="center"><img src = "https://raw.githubusercontent.com/llab305/O-RAN/master/xApp%20Descriptor/Figure/Figure%202.4-7.png"></image></p>
+ <p align="center"> Figure 2.4-7 messaging.ports.txMessages - example </p>
+     
 ***     
      
 ###### 2.4.1.5	rxMessages (Mandatory)
  *	Writer : xApp designer
  *	Data type : string
- *	Description : </br>
- *	Example : 
+ *	Description : Different processes and events in xApp correspond to different RMR message type names, which will contain all RMR message type names of xApp that can receive the response, and then xApp Manager will update the data in the xApp Manager table in influxDB.</br>
+ *	Example : Figure 2.4-8
+      
+ <p align="center"><img src = "https://raw.githubusercontent.com/llab305/O-RAN/master/xApp%20Descriptor/Figure/Figure%202.4-8.png"></image></p>
+ <p align="center"> Figure 2.4-8 messaging.ports.rxMessages - example </p>
+     
 ***       
      
 ###### 2.4.1.6	policies (Mandatory)
+Contains a list of policies that xApp can support. It is recommended to fill in SupportXapp (Optional) this field will help RIC Operator know how many xApps related to A1 policies need to be deployed in the future.
+
+The policies field will be filled in three ways:
+1.	Policies field is empty, indicating that the cap does not need to receive an A1 policy.  (Please refer to Examples C for filling examples)
+2.	Policies field is not empty, fill in the PolicyTypeId (Conditional) field and the SupportXapp (Optional) field, indicating that the xApp must receive the A1 policy corresponding to the policy type. (Please refer to Examples A and Examples B for filling examples)
+3.	Policies field is not empty, fill in the content defined in the PolicyTypeId (Conditional) field to indicate that xApp must receive the A1 policy corresponding to the policy type. (Please refer to Examples D for filling examples)
 
 ***    
 
+###### 2.4.1.6.1	PolicyTypeId (Conditional)
+ *	Writer : xApp designer
+ *	Data type : string
+ *	Description : The name of the category of A1 policy.</br> If xApp needs to receive A1 policy, you must fill in the content defined in this field, and then xApp Manager will update the data in xApp Manager Table in influxDB. When filling in this content, the xApp designer must select a PolicyTypeId according to Table 2.4 1 to fill in content;  otherwise, if the xApp does not need to receive the A1 policy, the xApp designer does not need to fill in the content defined in this field.
+
+     <p align="center"> Table 2.2-1 Secondary field correspondence table under the main field </p>
+
+    |Policy type objectives|Description|PolicyTypeId|
+    |---|---|---|
+    |QoS Target|QoS's service measurement target|ORAN_QoSTarget_2.0.0|
+    |QoE Target|QoE's service measurement target|ORAN_QoETarget_2.0.0|  
+    |Traffic Steering Preferences|Balance the load of the cell|ORAN_TrafficSteeringPreference_2.0.0|
+    |UE Level Target|UE performance target|ORAN_UELevelTarget_1.0.0|  
+    |QoS optimization with resource directive|QoS's service measurement target and balance the load of the Cell|ORAN_QoSandTSP_2.0.0|
+    |QoE optimization with resource directive|QoE's service measurement target and balance the load of the Cell|ORAN_QoEandTSP_2.0.0|  
+    |Load Balancing|Balance the load between congested cells and non-congested candidate cells|ORAN_LoadBalancing_1.0.0|
+
+*	Example : Figure 2.4-9
+
+ <p align="center"><img src = "https://raw.githubusercontent.com/llab305/O-RAN/master/xApp%20Descriptor/Figure/Figure%202.4-9.png"></image></p>
+ <p align="center"> Figure 2.4-9 messaging.ports.policies.PolicyTypeId - example </p> 
+ 
+***
+
+###### 2.4.1.6.2	SupportXapp (Optional)
+ *	Writer : xApp designer
+ *	Data type : string
+ *	Description : List of xApps that support implementing A1 policy.</br> If the xApp needs to receive the A1 policy, it can choose to fill in this field, and then the xApp Manager will update the data in the xApp Manager Table in influxDB; otherwise, if the xApp does not need to receive the A1 policy, it is not necessary to fill in this field. When filling in the content, fill in this field according to the xapp_name (Mandatory) in the xApp Descriptor that the xApp designer will deploy in the future to support the implementation of the A1 policy.
+ *	Example : Figure 2.4-10
+ 
+ <p align="center"><img src = "https://raw.githubusercontent.com/llab305/O-RAN/master/xApp%20Descriptor/Figure/Figure%202.4-10.png"></image></p>
+ <p align="center"> Figure 2.4-10 messaging.ports.policies.SupportXapp - example </p> 
+ 
+***
 
 ###### 2.4.1.7	description (Optional)
  *	Writer : xApp designer
  *	Data type : string
- *	Description : </br>
- *	Example : 
+ *	Description : The description of the port number used. Fill in the content in detail according to the purpose of the port number. When filling in the content, only "space", uppercase or lowercase English letters, and numbers can be used, and the total length is limited to less than or equal to 30 characters.</br>
+ *	Example : Figure 2.4-11 
+ 
+ <p align="center"><img src = "https://raw.githubusercontent.com/llab305/O-RAN/master/xApp%20Descriptor/Figure/Figure%202.4-11.png"></image></p>
+ <p align="center"> Figure 2.4-11 messaging.ports.description - example </p>
+     
 ***   
