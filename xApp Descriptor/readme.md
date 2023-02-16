@@ -1,5 +1,5 @@
 # 1. xApp Descriptor
-The xApp descriptor is required for the xApp deploying within the Near-RT RIC, which includes the information on the xApp configuration in the JSON format.
+The xApp Descriptor is a description file that must be submitted for the deployment of an xApp. It should contain basic information about the configuration of the xApp, and use JSON as the format for data exchange.
 
 # 2. xApp Descriptor Field
 ***
