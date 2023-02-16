@@ -1,29 +1,28 @@
 # 1. xApp Descriptor
 The xApp Descriptor is a description file that must be submitted for the deployment of an xApp. It should contain basic information about the configuration of the xApp, and use JSON as the format for data exchange.
 
+The fields that need to be filled in the xApp Descriptor will be divided into two parts:
+1.	Main fields : xapp_name (Mandatory) field, version (Mandatory) field, containers (Mandatory) field, messaging (Optional) field.
+2.	Secondary fields : all other fields except for the main fields are considered secondary fields.
+
+
 # 2. xApp Descriptor Field
 ***
 ### 2.1 xapp_name (Mandatory)
   *	Writer : xApp designer
   *	Data type : string
-  *	Description : The xApp name will provide a unique identifier for the xApp. </br>
-    
-    The name will be filled according to the rules of <b>"xapp-\<type\>-\<identifier\>"</b>.
-    
-    Because the name of this field will be the same as field <b> 2.3.1 name (container name) </b>, the total length is limited to 63 characters or less.
-    
-    Naming rules have the following definitions: </br>
-    
-    * "\<type\>" identifies xApp's purpose. When filling in the content, the xApp designer must only use lowercase English letters and digits, and the content should be filled in according to the rules suggested in Table 2.1-1.</br>
+  *	Description : The xApp name will serve as the unique identifier for the xApp. It should be named according to the <b>"xapp-\<type\>-\<identifier\>"</b> rule and the total length should be less than or equal to 63 characters due to the fact that this field's name is the same as the "name (container name)" field in section 2.3.1.
+    The naming convention is defined as follows:</br>
+    * "\<type\>" indicates the purpose of the xApp. When filling in this field, only lowercase letters and numbers should be used, and it should be named according to the suggested rules in Table 2.1-1.</br>
     
     <p align="center"> Table 2.1-1 "< type >" suggested rules to fill in the corresponding table </p>
     
     |"\<type\>"|Description|
     |---|---|
-    |"5qi-\<5QI value\>"|Identifies that the appropriate 5G QoS is assigned to traffic. "<5QI value>" denotes QoS requirements for a specific vertical application, including packet error rate (PER), packet delay budget (PDB), throughput, and other conditions.|  
-    |"handover"|Identifies that the UE hands over from a cell served by the base station to a cell served by another base station or the UE hands over from a cell served by the base station to another cell served by the base station.|
+    |"5qi-\<5QI value\>"|Represents appropriate 5G QoS for traffic allocation, where "<5QI value>" corresponds to the QoS requirements of a specific vertical application, including Packet Error Rate (PER), Packet Delay Budget (PDB), Throughput, and other requirements.|  
+    |"handover"|Refers to the scenario where a UE (User Equipment) performs a handover from one serving cell to another serving cell of the same base station or to a serving cell of a different base station.|
     
-    * "\<identifier\>" is used to distinguish xApps for the same purpose but with different algorithm designs or control different UEs. When filling in the content, the xApp designer must only use lowercase English letters and digits may use to fill content.
+    * "\<identifier\>" is used to distinguish xApps of the same purpose but with different algorithm designs or controlling different UEs.  When filling in this field, only lowercase letters and numbers should be used.
   
   *	Example: if "\<type\>" is equal to "5qi-\<5QI value\>", as shown in Figure 2.1-1; if "\<type\>" is equal to "handover", as shown in Figure 2.1-2.
   
