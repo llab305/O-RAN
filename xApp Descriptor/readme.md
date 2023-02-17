@@ -1,7 +1,7 @@
 # 1. xApp Descriptor
-The xApp Descriptor is a description file that must be submitted for the deployment of an xApp. It should contain basic information about the configuration of the xApp, and use JSON as the format for data exchange.
+The xApp descriptor is a description file that must be submitted for the deployment of an xApp. It should contain basic information about the configuration of the xApp, and use JSON as the format for data exchange.
 
-The fields that need to be filled in the xApp Descriptor will be divided into two parts:
+The fields that need to be filled in the xApp descriptor will be divided into two parts:
 1.	Main fields : xapp_name (Mandatory) field, version (Mandatory) field, containers (Mandatory) field, messaging (Optional) field.
 2.	Secondary fields : all other fields except for the main fields are considered secondary fields.
 
@@ -56,7 +56,7 @@ The fields that need to be filled in the xApp Descriptor will be divided into tw
     |9||SupportXapp (Optional)|  
     |10||description (Optional)|  
 
-    3. If the xApp Descriptor keeps backward compatibility with main fields and no secondary fields are added, but there is a need to correct content issues, then the "\<patch version\>" is incremented. Examples of content issues that need to be fixed include the "tag" (Mandatory) field in the "image" (Mandatory) field of the "containers" (Mandatory) field. 
+    3. If the xApp descriptor keeps backward compatibility with main fields and no secondary fields are added, but there is a need to correct content issues, then the "\<patch version\>" is incremented. Examples of content issues that need to be fixed include the "tag" (Mandatory) field in the "image" (Mandatory) field of the "containers" (Mandatory) field. 
      
      The naming convention is defined as follows:
      * "\<major version\>" is the major version number of the xApp descriptor. When filling in the content, only numbers can be used and there is no need to pad the content with zeros in front of the numbers.
@@ -254,7 +254,7 @@ The "policies" field will be filled in three ways:
  *	Writer : xApp designer
  *	Data type : string
  *	Description : List of xApps that support executing A1 policies.</br> If an xApp needs to receive A1 policies, it can choose to fill in this field. The xApp Manager will then update this information in the xApp Manager Table in influxDB. Conversely, if the xApp does not need to receive A1 policies, this field does not need to be filled in. 
- When filling in the content, the xApp designer should enter the xapp_name (Mandatory) field according to the future deployment of xApps that support executing A1 policies in the xApp Descriptor.
+ When filling in the content, the xApp designer should enter the xapp_name (Mandatory) field according to the future deployment of xApps that support executing A1 policies in the xApp descriptor.
  *	Example : Figure 2.4-10
  
  <p align="center"><img src = "https://raw.githubusercontent.com/llab305/O-RAN/master/xApp%20Descriptor/Figure/Figure%202.4-10.png"></image></p>
