@@ -1,4 +1,6 @@
 # 1. xApp Descriptor
+The xApp Descriptor is a file that provides information about an xApp, which is a software application running on the RAN Intelligent Controller (RIC) platform. By providing a comprehensive xApp Descriptor, xApp developers can make it easier for RIC operators to deploy and manage their xApps. It also helps ensure interoperability between xApps, and allows for more efficient network management. </br>
+
 The xApp descriptor is a description file that must be submitted for the deployment of an xApp. It should contain basic information about the configuration of the xApp, and use JSON as the format for data exchange.
 
 The fields that need to be filled in the xApp descriptor will be divided into two parts:
