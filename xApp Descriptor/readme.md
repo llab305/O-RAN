@@ -222,9 +222,9 @@ For non-RMR port, the following fields will be included: <b>name (Mandatory), co
 The list of policy types is supported by the xApp, and it is recommended to fill in the "SupportXapp" (Optional) field to facilitate the RIC Operator to know how many xApps related to the A1 policy will need to be deployed in the future.
 
 The "policies" field will be filled in three ways:
-1.	If the "policies" field is empty, it means that the xApp does not need to receive any A1 policies. (See Appendix C for an example of filling in.)
-2.	If the "policies" field is not empty, and the "PolicyTypeId" (Conditional) and "SupportXapp" (Optional) fields are filled in, it means that the xApp must receive the A1 policy corresponding to that Policy type. (See Appendix A and Appendix B for examples of filling in.)
-3.	If the "policies" field is not empty, and the "PolicyTypeId" (Conditional) field is filled in according to the defined content, it means that the xApp must receive the A1 policy corresponding to that Policy type. (See Appendix D for an example of filling in.)
+1.	If the "policies" field is empty, it means that the xApp does not need to receive any A1 policies. (See Example C for an example of filling in.)
+2.	If the "policies" field is not empty, and the "PolicyTypeId" (Conditional) and "SupportXapp" (Optional) fields are filled in, it means that the xApp must receive the A1 policy corresponding to that Policy type. (See Example A and Example B for examples of filling in.)
+3.	If the "policies" field is not empty, and the "PolicyTypeId" (Conditional) field is filled in according to the defined content, it means that the xApp must receive the A1 policy corresponding to that Policy type. (See Example D for an example of filling in.)
 
 ***    
 
