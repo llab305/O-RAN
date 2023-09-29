@@ -267,7 +267,7 @@ The "policies" field will be filled in three ways:
 ###### 2.4.1.7	description (Optional)
  *	Writer : xApp designer
  *	Data type : string
- *	Description : The description of the port number's usage should be filled in detail based on the purpose of the port number. When filling in the content, only "space", uppercase or lowercase English letters, and numbers can be used, and the total length is limited to less than or equal to 30 characters.</br>
+ *	Description : The description of the port number's usage should be filled in detail based on the purpose of the port number. When filling in the content, only "space", uppercase or lowercase English letters, and numbers can be used, and the total length is limited to less than or equal to 50 characters.</br>
  *	Example : Figure 2.4-11 
  
  <p align="center"><img src = "https://raw.githubusercontent.com/llab305/O-RAN/master/xApp%20Descriptor/Figure/Figure%202.4-11.png"></image></p>
